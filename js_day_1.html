@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hello Lokesh")
+        
+
+        document.write("Hello world")
+
+
+        //var can be redeclared & reassigned
+
+        var a=10
+        var a=30
+        console.log(a) // 30
+       
+        //let can be reassgined but can't be redeclared
+        let b=40
+        //let b=50 shows an error
+        b=50
+        console.log(b)
+
+
+        //const neither can be redeclared nor reassigned 
+        const c=345
+        //const c=56 shows error
+        // c=12      shows error
+        console.log(c)
+        
+        //we can call the function before or after defining the function both
+        hello()
+        function hello()
+        {
+            let a=10
+            console.log(a)
+        }
+        
+        //hosting
+
+        //we can't use let variable before initialization
+
+       //  console.log(y)
+        //let y=10 // generate an error because y is used before its initialization
+
+        //we can use var variable before initialization but it will show undefined 
+        console.log(s)
+
+        var s=12
+
+    </script>
+</body>
+</html>
