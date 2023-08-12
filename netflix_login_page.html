@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        html{
+            font-size: 2em;
+        }
+        body{
+            background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/6c884f48-f7d8-4a59-9d25-b7c138813aee/ed2b002b-c6c5-459c-9c97-753f50e8286b/IN-en-20230807-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 152vh;
+            width: 100vw;
+            margin: 0 auto;
+        }
+        .parent{
+            height: 100%;
+            /* background-color: black;
+            opacity: 0.7; */
+        }
+            
+           
+           
+        .logo{
+            height: 10vh;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            
+        }
+        
+        #logo{
+            
+            color: red;
+            font-size: 4em;
+            opacity: 1;
+            margin-left: 80px;
+        }
+        
+        .mid{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            margin-bottom: 100px;
+           
+
+        }
+        .form{
+            height: 100%;
+            
+            max-width: 70%;
+            background-color: black;
+            opacity: 0.9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            
+
+        }
+        .form1{
+            height: 50%;
+            width: 75%;
+           
+           
+
+        }
+
+        .email, .password,.button{
+            height: 15%;
+            width: 100%;
+          
+        }
+        .email, .password{
+            margin-bottom: 30px;
+        }
+        .form2{
+            height: 30%;
+            width: 75%;
+           
+        }
+        input{
+            background-color: #333333;
+            outline: none;
+            border-radius: 10px;
+            font-size: 1em;
+            color: white;
+            padding-left: 15px;
+        }
+        input,button{
+
+             height: 90%;
+             width: 95%;
+        }
+        .button{
+            margin-top: 80px;
+        }
+        button{
+            
+            font-size: 1rem;
+            background-color: red;
+            border-radius: 15px;
+            color: white;
+            font-weight: bold;
+        }
+        .remember{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+        }
+         .checkbox{
+              display: flex;
+              
+         }  
+         .footer{
+              width: 100%;
+              height: 35vh;
+              background-color: black;
+              opacity: 0.8;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+         }    
+         .inner-foot{
+              height: 100%;
+              max-width: 60%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: start;
+         }   
+         ul{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            list-style: none;
+            padding-left: 0px;
+         }
+         li{
+            margin-right: 50px;
+         }    
+         #select{
+             height: 70px;
+             width: 200px;
+             background-color: black;
+             border-radius: 10px;
+             border: 1px solid white;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }  
+         svg{
+            fill: white;
+            margin-right: 10px;
+         }   
+         
+       
+       
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="logo">
+             <h1 id="logo">Netflix</h1>
+        </div>
+        <div class="mid">
+                <div class="form">
+                      <div class="form1">
+                              <h1 style="color: white;">Sign in</h1>
+                              <div class="email">
+                                  
+                                <input type="text" placeholder="Email or Phone Number">
+                            </div>
+                            <div class="password">
+                               
+                                <input type="password" placeholder="Password">
+                            </div>
+                            <div class="button">
+                                <button id="btn">Sign in</button>
+                            </div>
+                            <div class="remember">
+                                  <div class="checkbox">
+                                    <input type="checkbox" style="height: 30px; width: 30px; border-radius: 15px; margin-right: 10px;">
+                                    <label for="" style="color: white; font-size: 0.9em;">Remember me</label>
+                                  </div>
+                                  <div class="help">
+                                      <p style="color: white;">Need help?</p>
+                                  </div>
+                            </div>
+                      </div>
+                      <div class="form2">
+                              <p style="text-decoration: none; color: #73736D;">New to Netflix? <a href="" style="text-decoration: none; color: white">Sign up now</a>.</p>
+                              <p style="text-decoration: none; color: #73736D;">This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="" style="text-decoration: none; color: white">Learn more</a>.</p>
+                      </div>
+                </div>
+        </div>
+        <div class="footer">
+                  <div class="inner-foot">
+                          <p style="color: white;">Questions? Call 000-800-919-1694</p>
+                          <ul>
+                            <li style="color: white;">FAQ</li>
+                            <li style="color: white;">Help Centre</li>
+                            <li style="color: white;">Terms of Use</li>
+                            <li style="color: white;">Privacy</li>
+                            <li style="color: white;">Cookie Preferences</li>
+                            <li style="color: white;">Corporate Information</li>
+                          </ul>
+                          <div id="select">
+                            <svg  xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></svg>
+                            <select name="" id="" style="height: 70px; font-size: 25px; background-color: transparent; color: white; border: none; outline: none;">
+                                
+                                <option value="" >English</option>
+                            </select>
+                          </div>
+                  </div>
+        </div>
+    </div>
+</body>
+</html>
