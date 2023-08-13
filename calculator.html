@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        html{
+            font-size: 4em;
+        }
+        body{
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container
+        {
+            height: 60vh;
+            max-width: 100%;
+            border: 1px solid black;
+            display: grid;
+            grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+            
+            border-radius: 15px;
+
+        }
+        .row{
+            border: 1px solid black;
+        }
+        #frow{
+            background-color: #372824;
+            color: white;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            font-size: 1em;
+            
+        }
+        #srow{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            border: 1px solid black;
+            
+        }
+        .tffrow{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            border: 1px solid black;
+           
+            
+        }
+        #lrow{
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            border: 1px solid black;
+            
+            
+        }
+        input{
+            font-size: 0.5em;
+        }
+        #dis{
+            height: 100%;
+            width: 100%;
+            background-color: #372824;;
+            color: white;
+            font-size: 0.8em;
+            padding-left: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="row" id="frow">
+            <input type="text" name="display" id="dis">
+         </div>
+         <div class="row" id="srow">
+            <input type="button" value="AC" onclick="clearDisplay()" style="background-color: skyblue;">
+            <input type="button" value="DEL" onclick="clearLastDisplay()" style="background-color: skyblue;">
+            <input type="button" value="/" onclick="appendToDisplay('/')" style="background-color: lightgray;">
+         </div>
+         <div class="row tffrow">
+               <input type="button" value="1" onclick="appendToDisplay('1')">
+               <input type="button" value="2"onclick="appendToDisplay('2')">
+               <input type="button" value="3" onclick="appendToDisplay('3')">
+               <input type="button" value="*" onclick="appendToDisplay('*')" style="background-color: lightgray;">
+         </div>
+         <div class="row tffrow">
+            <input type="button" value="4" onclick="appendToDisplay('4')">
+            <input type="button" value="5" onclick="appendToDisplay('5')">
+            <input type="button" value="6" onclick="appendToDisplay('6')">
+            <input type="button" value="+" onclick="appendToDisplay('+')" style="background-color: lightgray;">
+         </div>
+         <div class="row tffrow">
+            <input type="button" value="7" onclick="appendToDisplay('7')">
+            <input type="button" value="8" onclick="appendToDisplay('8')">
+            <input type="button" value="9" onclick="appendToDisplay('9')">
+            <input type="button" value="-" onclick="appendToDisplay('-')" style="background-color: lightgray;">
+         </div>
+         <div class="row" id="lrow">
+            <input type="button" value="." onclick="appendToDisplay('.')">
+            <input type="button" value="0" onclick="appendToDisplay('0')">
+            <input type="button" value="=" onclick="eve()" style="background-color: skyblue;">
+         </div>
+    </div>
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById('dis').value += value;
+        }
+        function clearDisplay() {
+            document.getElementById('dis').value = '';
+        }
+        function clearLastDisplay() {
+            document.getElementById('dis').value = document.getElementById('dis').value.toString().slice(0,-1);
+        }
+        function eve() {
+
+            try {
+                document.getElementById('dis').value = eval(document.getElementById('dis').value);
+            } catch (error) {
+                document.getElementById('dis').value = "Error";
+            }
+      
+        }
+    </script>
+</body>
+</html>

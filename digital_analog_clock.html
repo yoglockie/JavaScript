@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d{
+            background-color: lightgray;
+            border: 1px solid black;
+            border-radius: 20px;
+            font-size: 100px;
+            box-shadow: 2px 2px 2px black;
+            margin-bottom: 100px;
+        }
+        #clockContainer {
+                    position: relative;
+                    margin: auto;
+                    height: 40vw;
+                    /*to make the height and width responsive*/
+                    width: 40vw;
+                    background: url(https://clipart-library.com/images/6cy5pLEoi.png) no-repeat;
+                    /*setting our background image*/
+                    background-size: 100%;
+                 }
+                                
+               #hour,
+               #minute,
+               #second {
+                   position: absolute;
+                   background: black;
+                   border-radius: 10px;
+                   transform-origin: bottom;
+               }
+                
+               #hour {
+                   width: 1.8%;
+                   height: 25%;
+                   top: 25%;
+                   left: 48.85%;
+                   opacity: 0.8;
+               }
+                
+               #minute {
+                   width: 1.6%;
+                   height: 30%;
+                   top: 19%;
+                   left: 48.9%;
+                   opacity: 0.8;
+               }
+                
+               #second {
+                   width: 1%;
+                   height: 40%;
+                   top: 9%;
+                   left: 49.25%;
+                   opacity: 0.8;
+               }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="d" >08:12:24PM</div>
+    </center>
+
+<div id="clockContainer">
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+</div>
+   
+     <script>
+        
+          function digitalclock(){
+            let t = new Date()
+            let hour = t.getHours()
+            let min= t.getMinutes()
+            let sec = t.getSeconds()
+            let am_pm = "AM"
+            if(hour>=12)
+            {
+                if(hour==12)
+                {
+                    am_pm="PM"   
+                }
+                else{
+                    hour=hour-12
+                    am_pm="PM"
+                }
+            }
+            else if(hour==0)
+            {
+                hour=12
+                am_pm="AM"
+            }
+            hour =    hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+            let time= hour+":"+min+":"+sec+am_pm 
+
+            document.getElementById("d").innerHTML=time;
+          }
+          setInterval(digitalclock, 1000);
+
+          setInterval(() => {
+                d = new Date(); //object of date()
+                hr = d.getHours();
+                min = d.getMinutes();
+                sec = d.getSeconds();
+                hrr = 30 * hr + min / 2; //converting current time
+                minr = 6 * min;
+                secr = 6 * sec;
+             
+                hour.style.transform = `rotate(${hrr}deg)`;
+                minute.style.transform = `rotate(${minr}deg)`;
+                second.style.transform = `rotate(${secr}deg)`;
+            }, 1000);
+
+
+          
+     </script>
+</body>
+</html>
+
+
+
