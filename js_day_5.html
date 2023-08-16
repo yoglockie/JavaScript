@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <input type="text" class="c" id="one">
+    <input type="text" class="c" id="two">
+    <input type="text" class="c" id="three">
+    <input type="text" class="c" id="four">
+    
+    <button id="btn" onclick="submit()">Submit</button>
+    
+    <h1 id="a"></h1>
+
+    <script>
+        //  function submit() {
+        //     let a =document.querySelectorAll("input")
+        //     for(let i of a)
+        //     {
+        //         console.log(i.value)
+        //         i++
+        //     }
+        //     document.querySelectorAll("input").value=''
+            
+        //  }
+
+        function arithmatic(a,b,o)
+        {
+             if(o=='+')
+             {
+                console.log(a+b)
+             }
+             else if(o=='-')
+             {
+                console.log(a-b)
+             }
+             else if(o=='*')
+             {
+                console.log(a*b)
+             }
+             else if(o=='/')
+             {
+                console.log(` devide ${a/b} `)
+             }
+             else if(o=='%')
+             {
+                console.log(` devide ${a%b} `)
+                return `${a%b}`
+             }
+             else
+             {
+                console.log(`Enter valid output`)
+             }
+        }
+
+        arithmatic(12,14,'+')
+        arithmatic(12,14,'-')
+        arithmatic(12,14,'*')
+        arithmatic(12,14,'/')
+        console.log(arithmatic(12,14,'%'));
+
+        function hello(a,b=50)
+        {
+            console.log(`${a} ${b}`)  // 10 20 
+        }
+        hello(10,20)  
+    </script>
+</body>
+</html>
