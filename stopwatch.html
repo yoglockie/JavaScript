@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        .parent{
+              height: 300px;
+              width: 500px;
+              background-color: skyblue;
+              border-radius: 15px;
+              box-shadow: 2px 2px 4px black;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              font-size: 30px;
+
+        }
+        span{
+            margin: 10px;
+            color: white;
+            font-size: 30px;
+        }
+        button{
+              padding: 10px 20px;
+              background-color: white;
+              border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+     <div class="parent">
+         <div class="time">
+            <span id="hr">00</span>Hr
+            <span id="min">00</span>Min
+            <span id="sec">00</span>Sec
+            <span id="count">00</span>
+         </div>
+         <div class="buttons">
+             <button onclick="stopwatch()">Start</button>
+             <button onclick="stopw()">Stop</button>
+             <button onclick="reset()">Reset</button>
+         </div>
+     </div>
+     <script>
+          var i;
+           let hour =  0;
+           let minute =0;
+           let second=0;
+           let count =0;
+           function stopwatch()
+           {
+              timer=true;
+                 
+                count++;
+                   if(count==100)
+                   {
+                    second++;
+                    count=0;
+                   }
+                   if(second==60)
+                   {
+                    minute++;
+                    second=0;
+                   }
+                   if(minute==60)
+                   {
+                    hr++;
+                    minute=0;
+                    second=0;
+                   }
+                       let hrString = hour;
+                       let minString = minute;
+                       let secString = second;
+                       let countString = count;
+                   if (hour < 10) {
+                         hrString = "0" + hrString;
+                     }
+              
+                     if (minute < 10) {
+                         minString = "0" + minString;
+                     }
+              
+                     if (second < 10) {
+                         secString = "0" + secString;
+                     }
+              
+                     if (count < 10) {
+                         countString = "0" + countString;
+                     }
+
+                    document.getElementById('hr').innerHTML = hrString;
+                    document.getElementById('min').innerHTML = minString;
+                    document.getElementById('sec').innerHTML = secString;
+                    document.getElementById('count').innerHTML = countString;
+                    i= setTimeout(stopwatch, 10);
+                }
+           
+           function reset() {
+               hour = 0;
+               minute = 0;
+               
+                second = 0;
+                count = 0;
+                document.getElementById('hr').innerHTML = "00";
+                document.getElementById('min').innerHTML = "00";
+                document.getElementById('sec').innerHTML = "00";
+                document.getElementById('count').innerHTML = "00";
+                clearTimeout(i);
+            }
+            function stopw() {
+            
+            clearTimeout(i)
+           }
+     </script>
+</body>
+</html>
