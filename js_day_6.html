@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          
+        //  let a=[10,20,30,40,50]
+        //  let s=0;
+         
+        //  for(let i=0;i<a.length;i++)
+        //  {
+        //     s+=a[i]
+        //  }
+        //  console.log(s)
+         
+        //  for(let j of a)
+        //  {
+        //     console.log(j)
+        //  }
+
+        //  for(let j in a)
+        //  {
+        //     console.log(j)
+        //  }
+
+        //  a.forEach(function (item) {
+        //     console.log(item)
+        //  })
+        //  a.forEach((item)=> {
+        //     console.log(item)
+        //  })
+         
+        // let a=[10,20,30,40,50]
+
+        // //push value at last
+        // a.push("lokesh")
+        // console.log(a) // [10, 20, 30, 40, 50, 'lokesh']
+
+        // //pop/delete from last
+
+        // a.pop()
+        // console.log(a) //[10,20,30,40,50]
+
+
+        // //insert at beginning 
+
+        // a.unshift("loki") 
+        // console.log(a)
+
+        // //delete from beginning 
+        // a.shift()
+        // console.log(a)
+        
+        // // slice funtion slice(start,end+1)
+
+        // console.log(a.slice(0,3))
+        // console.log(a.slice(0,-2))
+        
+        // //splice  splice(x,n,y) go on xth indexing delete n elements & replace xth indexing by y
+
+        // a.splice(2,0,"loki")
+        // console.log(a)
+
+        // a.splice(3,2,"yogi")
+        // console.log(a)
+
+
+        // let b=[100,230,10,20,30,40,50]
+
+
+
+        // //map = return the array 
+
+
+        // let c =b.map(function(item){
+        //     return item*2
+        // })
+        
+        // console.log(c)
+        
+
+        // let a=[70,40,60,40,50,12,45,65,89,40]
+
+        // let b=a.map((item)=>{
+        //      if(item>50)
+        //      {
+        //         return "Pass"
+        //      }
+        //      else
+        //      {
+        //         return "Fail"
+        //      }
+        // })
+
+        // console.log(b)
+       
+       //filter  similar to map
+         
+    //    let a=[70,40,60,40,50,12,45,65,89,40]
+       
+    //    let b=a.filter((item)=>{
+    //     return item>50
+    //    })
+    //    console.log(b)
+
+    
+
+    //  let c=a.reduce((a,b)=>{
+    //     return a+b
+    //  })
+    //     console.log(c) 
+        
+      let a= "lokesh, yogi, loki , yog"
+      console.log(a.split(","))  
+
+      let d =['lokesh', ' yogi', ' loki ', ' yog']
+      console.log(d.join(','))
+
+      let e =[['lokesh', ' yogi'],[ ' loki ', ' yog']]
+      console.log(e)
+      console.log(e.flat())
+    </script>    
+</body>
+</html>
