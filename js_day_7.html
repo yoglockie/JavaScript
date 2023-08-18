@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+         <input type="text" id="name">
+         <button id="add" onclick="addtoarray()">Add to array</button>
+         <button id="prin" onclick="prin()">Print names</button>
+    </div>
+    <div id="names">
+         
+    </div>
+
+    <script>
+        
+        let a=[];
+         function addtoarray() {
+             
+            a.push(document.getElementById("name").value) 
+            
+         }
+
+         let i=0
+         function prin() {
+           let c= setInterval(function(){
+                
+                document.getElementById("names").innerHTML+=a[i]
+                i++
+                if(i>=a.length)
+                {
+                    clearInterval(c)
+                }
+                
+            },1000)
+            
+         }
+         
+    </script>
+</body>
+</html>
